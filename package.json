@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "todo-resolver.helloWorld",
-        "title": "Hello World"
+        "command": "todo-resolver.resolve-todo",
+        "title": "TODO Resolver: Resolve TODO"
       }
     ]
   },
