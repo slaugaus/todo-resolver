@@ -7,9 +7,9 @@ import * as vscode from 'vscode';
 // const todoExpr = /TODO:? /;
 const WORDS_TO_CHECK = ["TODO", "FIXME"];
 
-// Matches "word: " and "word "
+// Matches "word: ", "word ", "word- ", "word - " (and "word : ")
 function regExpFromWord(word: string): RegExp {
-	return new RegExp(`${word}:? `);
+	return new RegExp(`${word} ?[:\-]? `);
 }
 
 function getWordRangeInLine(document: vscode.TextDocument, line: vscode.TextLine, expr: RegExp): vscode.Range | undefined {
